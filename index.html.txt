@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIENDO Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo', sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:rgba(0,0,0,0.8);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav .logo{
+    font-size:22px;
+    color:#d4a43a;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#d4a43a;
+}
+
+.btn{
+    background:#d4a43a;
+    padding:8px 15px;
+    border-radius:6px;
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:0 60px;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#d4a43a;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+    color:#ddd;
+}
+
+.hero button{
+    background:#d4a43a;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* SECTION */
+.section{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:30px;
+    margin-bottom:40px;
+    color:#d4a43a;
+}
+
+/* MENU */
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1a1a1a;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+    color:#d4a43a;
+}
+
+.card p{
+    padding:0 10px 15px;
+    color:#ccc;
+}
+
+.price{
+    color:#d4a43a;
+    font-weight:bold;
+    padding-bottom:15px;
+}
+
+/* FEATURES */
+.features{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.feature{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:10px;
+    width:220px;
+}
+
+/* BUTTONS */
+.call-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#d4a43a;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.wa-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">VIENDO</div>
+
+    <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#menu">القائمة</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+
+    <a class="btn" href="tel:0791071217">احجز الآن</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>VIENDO</h1>
+        <p>أفضل المشاوي والوجبات السريعة في بسكرة</p>
+
+        <p style="color:#d4a43a;">
+            📍 أمام فندق باب الصحراء
+        </p>
+
+        <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+            اطلب الآن
+        </button>
+    </div>
+</div>
+
+<!-- MENU -->
+<div class="section" id="menu">
+    <h2>أطباقنا المميزة</h2>
+
+    <div class="menu">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+            <h3>برغر مشوي</h3>
+            <p>لحم طري مع صوص خاص</p>
+            <div class="price">1200 دج</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+            <h3>مشاوي متنوعة</h3>
+            <p>أفضل أنواع اللحوم المشوية</p>
+            <div class="price">1500 دج</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+            <h3>سلطة فرش</h3>
+            <p>خضار طازجة وصحية</p>
+            <div class="price">500 دج</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>اتصل بنا</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            📍 أمام فندق باب الصحراء - بسكرة
+        </div>
+
+        <div class="feature">
+            📞 الهاتف:
+            <br>
+            <a class="call-btn" href="tel:0791071217">اتصل الآن</a>
+        </div>
+
+        <div class="feature">
+            💬 واتساب:
+            <br>
+            <a class="wa-btn" href="https://wa.me/213791071217" target="_blank">
+                راسلنا على واتساب
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 VIENDO Restaurant - Biskra
+</footer>
+
+</body>
+</html>
