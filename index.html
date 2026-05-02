@@ -25,7 +25,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 60px;
+    padding:15px 20px;
     background:rgba(0,0,0,0.8);
     position:fixed;
     width:100%;
@@ -70,7 +70,7 @@ nav ul li a:hover{
     background:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover no-repeat;
     display:flex;
     align-items:center;
-    padding:0 60px;
+    padding:0 20px;
     position:relative;
 }
 
@@ -110,7 +110,7 @@ nav ul li a:hover{
 
 /* SECTION */
 .section{
-    padding:80px 60px;
+    padding:60px 20px;
     text-align:center;
 }
 
@@ -200,6 +200,46 @@ footer{
     padding:20px;
     margin-top:40px;
     color:#888;
+}
+
+/* ===================== */
+/* 📱 MOBILE RESPONSIVE */
+/* ===================== */
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:35px;
+        text-align:center;
+    }
+
+    .hero p{
+        font-size:14px;
+        text-align:center;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        flex-direction:column;
+        align-items:center;
+    }
 }
 </style>
 </head>
